@@ -1,0 +1,69 @@
+[2024-07-26 15:04:53,563: INFO: main: Hello! Logged]
+[2024-07-26 15:05:10,787: INFO: main: Hello! Logged]
+[2024-07-26 15:13:14,800: INFO: main: Hello! Logged]
+[2024-07-26 15:16:11,628: INFO: main: Hello! Logged]
+[2024-07-26 15:16:16,329: INFO: common: Hello]
+[2024-07-28 14:01:05,531: INFO: common: Hello]
+[2024-07-28 14:03:19,528: INFO: common: Hello]
+[2024-07-28 14:04:33,313: INFO: common: Hello]
+[2024-07-28 14:05:28,828: INFO: common: Hello]
+[2024-07-28 14:05:28,856: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-28 14:05:28,856: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-28 14:05:28,857: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-28 14:05:28,857: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/Users/mukesh/Desktop/TextSummarizer/src/textSummarizer/utils/common.py", line 31, in read_yaml
+    return ConfigBox(content)
+  File "/Users/mukesh/miniconda3/envs/textS/lib/python3.10/site-packages/box/box.py", line 259, in __init__
+    raise BoxValueError("First argument must be mapping or iterable")
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mukesh/Desktop/TextSummarizer/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/Users/mukesh/Desktop/TextSummarizer/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 11, in main
+    config = ConfigurationManager()
+  File "/Users/mukesh/Desktop/TextSummarizer/src/textSummarizer/config/configuration.py", line 13, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/Users/mukesh/miniconda3/envs/textS/lib/python3.10/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/Users/mukesh/Desktop/TextSummarizer/src/textSummarizer/utils/common.py", line 33, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2024-07-28 14:08:46,645: INFO: common: Hello]
+[2024-07-28 14:08:46,672: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-28 14:08:46,673: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-28 14:08:46,673: INFO: common: created directory at: artifacts]
+[2024-07-28 14:08:46,673: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-28 14:08:52,262: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 66AD:251643:AA102:E9737:66A60399
+Accept-Ranges: bytes
+Date: Sun, 28 Jul 2024 08:38:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10242-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1722155930.507056,VS0,VE691
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b4ecf8e149596a747e49b6a13abe80e49df3b80d
+Expires: Sun, 28 Jul 2024 08:43:50 GMT
+Source-Age: 0
+
+]
+[2024-07-28 14:08:52,388: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
